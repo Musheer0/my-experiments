@@ -39,9 +39,10 @@ export default function RootLayout({
         ))}
       </head>
       <body
-        className={`${hostGrotesk.variable} antialiased`}
+        className={`${hostGrotesk.variable} bg-zinc-950! antialiased`}
       >
         {children}
+        <div className="h-screen w-full "></div>
       </body>
     </html>
   );

@@ -3,6 +3,20 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'satoshi';
+  src: url('/f.ttf');
+}
+.font-satoshi{
+    font-family: 'satoshi', sans-serif;
+
+}
+
+.nav-btn{
+box-shadow: 2px 31px 26px 16px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 31px 26px 16px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 31px 26px 16px rgba(0,0,0,0.75);
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -119,4 +133,50 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+i{
+  display:block
+}
+.hero{
+  background-color: #1C1C1C;
+}
+.hero-btn{
+ box-shadow: -1px 0px 10px 3px rgba(255, 255, 255, 0.178) inset;
+
+}
+.hero-img-btn{
+ box-shadow: -1px 0px 8px 3px rgba(255, 255, 255, 0.266) inset;
+
+}
+.hero-img-btn-middle{
+ box-shadow: 2px 35px 26px 16px #1C1C1C,
+  -1px 0px 8px 3px rgba(255, 255, 255, 0.266) inset;
+ ;
+
+}
+
+.d3-shadow{
+text-shadow: 0px 0px 10px #00000000;
+}
+
+.mask-r{
+ mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0, 0, 0, 0) 95%);
+}
+.mask-b{
+ mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0) 95%);
+}
+.mask-l{
+ mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0, 0, 0, 0.168) 98%);
+}
+.triangle {
+  position: absolute;
+  z-index: 10;
+  height: 80%;
+  width: 50%;
+  background: red;
+  bottom: 0;
+  left: 0;
+clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+
 }
