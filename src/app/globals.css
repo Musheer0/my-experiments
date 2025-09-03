@@ -183,10 +183,12 @@ clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 100% 0, 100% 100%, 100% 100%,
 
 .parent{
     perspective: 900px;
-    background-color: red;
+    cursor: pointer;
+ mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0, 0, 0, 0) 99%);
 
 }
 
+@scope(.parent){
 .problem{
   transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(1);
 }
@@ -195,26 +197,54 @@ clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 100% 0, 100% 100%, 100% 100%,
 }
 .codess{
   transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+  backdrop-filter: blur(3px);
 }
 .controles{
-  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg);
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) translateY(-220px) translateX(-80px);
 }
 .glow{
 clip-path:   polygon(0 0, 100% 0%, 100% 0, 0 0);
 }
 .card{
-              opacity:0
+  opacity:0
 
 }
 .card-div{
   transform: (0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+  opacity: 0;
 }
+}
+
 @scope(.parent:hover){
-  .d3{
-    opacity: 0.1;
-  }
+.codess{
+  transform: rotateX(3deg) rotateY(0deg) translateZ(10px) skewX(27deg)  scale(0.5) translateX(200px) translateZ(-50px) translateY(-300px);
+  backdrop-filter: blur(1px);
 }
-.d3{
+
+.problem{
+  transform: rotateX(2deg) rotateY(0deg) translateZ(-51px) skewX(27deg) translateY(0px) scale(0.8) translateX(-6rem);
+}
+.code{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+}
+.controles{
+  transform: rotateX(3deg) rotateY(0deg) translateZ(10px) skewX(27deg)   translateX(40px) scale(0.9) translateZ(-50px) translateY(-1010%);
+}
+.glow{
+clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.card{
+opacity: 0.7;
+}
+.card-div{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg)  translateZ(-51px) scale(0.9) translateY(-44px) translateX(-266px);
+  opacity: 1;
+}
+
+}
+.parent,
+.parent * {
   transform-style: preserve-3d;
-transform: rotateX(2deg) rotateY(0deg) translateZ(0px) skewX(27deg);
+  transition: all 360ms cubic-bezier(0.22, 1, 0.36, 1);
+
 }

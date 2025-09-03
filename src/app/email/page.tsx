@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import localFont from 'next/font/local'
 import { cn } from '@/lib/utils';
 
 const GradientText = ({ text ,className}: { text: string ,className:string}) => {
