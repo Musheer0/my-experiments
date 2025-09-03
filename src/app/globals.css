@@ -180,3 +180,41 @@ text-shadow: 0px 0px 10px #00000000;
 clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
 
 }
+
+.parent{
+    perspective: 900px;
+    background-color: red;
+
+}
+
+.problem{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(1);
+}
+.code{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+}
+.codess{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+}
+.controles{
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0px) skewX(0deg);
+}
+.glow{
+clip-path:   polygon(0 0, 100% 0%, 100% 0, 0 0);
+}
+.card{
+              opacity:0
+
+}
+.card-div{
+  transform: (0deg) rotateY(0deg) translateZ(0px) skewX(0deg) scale(0.6);
+}
+@scope(.parent:hover){
+  .d3{
+    opacity: 0.1;
+  }
+}
+.d3{
+  transform-style: preserve-3d;
+transform: rotateX(2deg) rotateY(0deg) translateZ(0px) skewX(27deg);
+}
